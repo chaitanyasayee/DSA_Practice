@@ -1,0 +1,56 @@
+Here's a README for the problem that avoids plagiarism while keeping the explanation clear and informative.
+
+---
+
+# Longest Substring Without Repeating Characters
+
+## Problem Statement
+
+Given a string `s`, determine the length of the longest contiguous substring that does not contain any duplicate characters.
+
+### Example Scenarios
+
+#### Example 1:
+**Input:**  
+`s = "abcabcbb"`  
+**Output:**  
+`3`  
+**Explanation:**  
+The longest substring without repeating characters is `"abc"`, which has a length of `3`.
+
+#### Example 2:
+**Input:**  
+`s = "bbbbb"`  
+**Output:**  
+`1`  
+**Explanation:**  
+The longest substring without repeating characters is `"b"`, which has a length of `1`.
+
+#### Example 3:
+**Input:**  
+`s = "pwwkew"`  
+**Output:**  
+`3`  
+**Explanation:**  
+The longest substring without repeating characters is `"wke"`, with a length of `3`.  
+Note: `"pwke"` is not a valid answer because substrings must be contiguous.
+
+---
+
+## Constraints
+
+- `0 <= s.length <= 50,000`
+- `s` consists of English letters, digits, symbols, and spaces.
+
+---
+
+## Approach
+
+### Sliding Window Technique
+
+This problem is efficiently solved using the **Sliding Window** approach with a HashSet (or HashMap) to track characters. The idea is to expand the window by adding characters while ensuring no duplicates exist. If a duplicate is found, the left pointer moves forward until the substring is unique again.
+
+**Time Complexity:** O(n)  
+**Space Complexity:** O(min(n, m)), where `m` is the number of possible unique characters.
+
+Would you like me to add the actual implementation in JavaScript or Python? 🚀
