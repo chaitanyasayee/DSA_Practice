@@ -21,4 +21,4 @@ class Solution:
         n = len(nums)
         mod = 10**9 + 7
         cnt = Counter(nums)
-        return dfs(0, s // 2, n // 2, (n + 1) // 2
+        return dfs(0, s // 2, n // 2, (n + 1) // 2)
