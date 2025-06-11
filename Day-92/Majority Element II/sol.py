@@ -11,3 +11,6 @@ class Solution:
             if val > len(nums)/3:
                 ans.append(key)
         return ans
+        
+# Time Complexity: O(n)
+# Space Complexity: O(n)
