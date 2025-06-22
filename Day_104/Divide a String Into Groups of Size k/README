@@ -1,0 +1,68 @@
+### Problem Statement: **Divide a String Into Groups of Size k**
+
+You are given:
+
+- A string `s` consisting of lowercase English letters.
+- An integer `k` representing the size of each group.
+- A character `fill` which is used to complete the last group if necessary.
+
+Your task is to divide the string `s` into groups of size `k` using the following procedure:
+
+1. The first group consists of the first `k` characters of the string, the second group consists of the next `k` characters, and so on.
+2. Each character from the string belongs to exactly one group.
+3. If the last group contains fewer than `k` characters, append the `fill` character to the group until its length becomes `k`.
+
+Return a list of strings representing the groups formed.
+
+Note: After removing any fill characters added to the last group and concatenating all the groups, the result should be the original string `s`.
+
+---
+
+### Example 1:
+
+**Input:**
+`s = "abcdefghi"`,
+`k = 3`,
+`fill = "x"`
+
+**Output:**
+`["abc", "def", "ghi"]`
+
+**Explanation:**
+The string is exactly divisible into 3 groups of size 3. No fill character is needed.
+
+---
+
+### Example 2:
+
+**Input:**
+`s = "abcdefghij"`,
+`k = 3`,
+`fill = "x"`
+
+**Output:**
+`["abc", "def", "ghi", "jxx"]`
+
+**Explanation:**
+The last group has only one character `'j'`. Two fill characters `'x'` are added to complete the group.
+
+---
+
+### Constraints:
+
+- `1 <= s.length <= 100`
+- `s` consists of lowercase English letters only.
+- `1 <= k <= 100`
+- `fill` is a lowercase English letter.
+
+### My Approach
+
+- Initialize an empty list answer to store the resulting groups.
+
+- Iterate through the string s in steps of size k:
+
+- For each step, extract a substring of k characters.
+
+- If the extracted substring is of length k, append it directly to the answer list.
+
+- If it's shorter than k, pad it with the fill character until it reaches length k, then append it to the list.
